@@ -9,6 +9,8 @@ export default function App() {
   const [imc, setImc] = useState(0);
 
   const calcularImc = () => {
+    if (!peso || !altura) return;
+  
     const calc = (peso / (altura * 2 )).toFixed(2);
   
     setImc(calc);
